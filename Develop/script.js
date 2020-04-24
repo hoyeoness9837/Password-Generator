@@ -8,7 +8,7 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
+// setting the length of passworld with if function and return condtion is not met
 function generatePassword() {
   const passLength = parseInt(prompt("Enter length of new password"));
 
@@ -16,12 +16,12 @@ function generatePassword() {
     alert("Please confirm your length of a new password is between 8 and 128.");
     return;
   }
-
+  //set var that include list of strings
   const lowerChar = "abcdefghijklmnopqrstuvwxyz",
     upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     numberChar = "0123456789",
     specialChar = "!#$%&'()*+,-./:<=>?@[]^_`{|}~";
-
+  //set var for Asking question using confirm function if click okay ->true
   const lowC = confirm("Do you want to include lowercase?"),
     upC = confirm("Do you want to include uppercase?"),
     numC = confirm("Do you want to include numbers?"),
@@ -31,7 +31,7 @@ function generatePassword() {
     alert("You need to select at least one type of character.");
     return;
   }
-
+  //Staring PW with blank and add on top of each. And make a random array of characters
   let passHolder = "",
     newPass = "";
 
